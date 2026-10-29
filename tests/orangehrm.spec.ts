@@ -27,21 +27,21 @@
 import { test, expect } from '@playwright/test';
 import { orangeHRM } from '../pages/orangehrmLogin';
 import { homePage } from '../pages/homepage';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config({ path: '.env' });
+// dotenv.config({ path: '.env' });
 
 test('Long into orange HRM and Create the employee', async ({ page }) => {
 
-    const url = process.env.url as string;
-    const username = process.env.username1 as string;
-    const password = process.env.password as string;
+    // const url = process.env.url as string;
+    // const username = process.env.username1 as string;
+    // const password = process.env.password as string;
 
     const loginPage = new orangeHRM(page);
     const homePageObj = new homePage(page);
 
     // Navigate to application
-    await page.goto(url);
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
     // Validate Login Page
     await expect(loginPage.companylogo).toBeVisible();
@@ -50,7 +50,7 @@ test('Long into orange HRM and Create the employee', async ({ page }) => {
     // await expect(loginPage.passwordCreds).toBeVisible();
 
     // Login
-    await loginPage.Login(username, password);
+    await loginPage.Login('Admin', 'admin123');
 
     // Validate Home Page
     await expect(loginPage.homePage).toBeVisible();

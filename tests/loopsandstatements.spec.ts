@@ -2,19 +2,19 @@ import { test, expect } from 'playwright/test';
 
 import { Loginpage } from '../pages/loginnnpage'
 
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 
-dotenv.config({ path: '.env' });
+//dotenv.config({ path: '.env' });
 
 test('for...loop', async ({ page }) => {
 
-    const pageUrl = process.env.url as string
-    const userName = process.env.username1 as string
-    const passWord: string = process.env.password as string
+    // const pageUrl = process.env.url as string
+    // const userName = process.env.username1 as string
+    // const passWord: string = process.env.password as string
     const loginToPage = new Loginpage(page);
 
-    await page.goto(pageUrl);
-    await loginToPage.login(userName, passWord);
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await loginToPage.login('Admin', 'admin123');
 
     await page.waitForLoadState('networkidle');
 

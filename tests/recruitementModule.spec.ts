@@ -3,18 +3,18 @@ import { test, expect } from '@playwright/test';
 import { LoginToOrangeHrm } from '../pages/recruitmntlogin';
 import { RecruitmentCandidatePage } from '../pages/recruitmentCandidatePage'
 import { RecruitmentVacancyPage } from '../pages/recruitmentVacancyPage';
-import dotenv from 'dotenv';
-// Import dotenv package
+// import dotenv from 'dotenv';
+// // Import dotenv package
 
-dotenv.config({ path: '.env' });
+// dotenv.config({ path: '.env' });
 // Load environment variables from .env file
 
 test('login to OrangeHRM and create recruitment', async ({ page }) => {
 
     // Read application URL from .env file
-    const url = process.env.url as string;
-    const userName = process.env.username1 as string;
-    const passWord = process.env.password as string;
+    // const url = process.env.url as string;
+    // const userName = process.env.username1 as string;
+    // const passWord = process.env.password as string;
 
     // Create an object for Page class
     const loginToOrangeHrm = new LoginToOrangeHrm(page);
@@ -22,9 +22,9 @@ test('login to OrangeHRM and create recruitment', async ({ page }) => {
     const recruitmentVacancyPage = new RecruitmentVacancyPage(page)
 
     //--------------------LoginPage----------------
-    await page.goto(url);
-    await loginToOrangeHrm.loginToApp(userName, passWord);
-    console.log('Current URL:', page.url());    
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await loginToOrangeHrm.loginToApp('Admin', 'admin123');
+    console.log('Current URL:', page.url());
     await expect(page).toHaveURL(/dashboard\/index$/);
 
     //-------------------------recuruitment Candidate page------------------------------------------
