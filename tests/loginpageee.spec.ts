@@ -34,14 +34,16 @@ test('verify login with only username', async () => {
 
     await loginpage.login('Admin', '');
 
-    await expect(loginpage.errorMessage).toBeVisible();
+
+    await expect(loginpage.requiredField).toBeVisible();
+
 
 })
 test('verify login with only password', async () => {
 
     await loginpage.login('', 'admin123');
 
-    await expect(loginpage.errorMessage).toBeVisible();
+    await expect(loginpage.requiredField).toBeVisible();
 
 })
 test('verify forgot password lonk', async () => {

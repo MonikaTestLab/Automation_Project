@@ -14,7 +14,7 @@ export class Loginpage {
         this.username = this.page.getByPlaceholder('Username');
         this.password = this.page.getByPlaceholder('Password');
         this.loginButton = this.page.getByRole('button', { name: 'Login' });
-        this.errorMessage = this.page.getByText('Invalid credentials');
+        this.errorMessage = this.page.locator('//div[@class="oxd-alert oxd-alert--error"]//div[1]');
         this.requiredField = this.page.getByText('Required');
         this.forgotPassword = this.page.getByText('Forgot your password?');
         this.heading = this.page.getByRole('heading', { name: 'Reset Password' });

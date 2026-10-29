@@ -118,9 +118,12 @@ export class RecruitmentCandidatePage {
     }
 
     async addCandidateForRecruitment() {
+        const name = 'Monika';
+        const randomName = name + Math.random().toString(36).substring(2, 6);
 
         await this.clickOnAddButtonXpath.click();
-        await this.firstNameXpath.fill('Monika');
+        await this.firstNameXpath.fill(randomName);
+
         await this.middleNameXpath.fill('Gowda');
         await this.lastNameXpath.fill('R');
         await this.selectVancy.click();

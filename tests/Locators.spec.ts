@@ -4,8 +4,8 @@ test("locators", async ({ page }) => {
 
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
-    await page.getByPlaceholder('Username', { exact: true }).fill("Admin")
-    await page.getByPlaceholder('Password', { exact: true }).fill("admin123")
+    await page.getByPlaceholder('Username', { exact: true }).fill("Admin");
+    await page.getByPlaceholder('Password', { exact: true }).fill("admin123");
     await page.getByRole('button', { name: "Login" }).click();
     await expect(page).toHaveURL(/dashboard/);
 

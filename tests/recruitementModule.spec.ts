@@ -44,11 +44,6 @@ test('login to OrangeHRM and create recruitment', async ({ page }) => {
 });
 
 
-// (//div[@class="oxd-select-text oxd-select-text--active"])[1]
-// (//div[@class="oxd-select-text oxd-select-text--active"])[2]
-// (//div[@class="oxd-select-text oxd-select-text--active"])[3]
-// (//div[@class="oxd-select-text oxd-select-text--active"])[4]
-
 
 
 
