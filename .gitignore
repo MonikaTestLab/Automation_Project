@@ -8,3 +8,6 @@ test-results/
 /playwright/.cache/
 /playwright/.auth/
 .playwright-mcp/ 
+
+# Private documents
+tests/uploadFiles/*.pdf
