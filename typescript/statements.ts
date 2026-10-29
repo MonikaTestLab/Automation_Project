@@ -56,3 +56,25 @@ if (marks <= 70) {
 }
 
 
+// switch case/................................................................
+//Use switch when one variable can have several possible values.
+let broowser = "Chrome";
+
+switch (broowser) {
+    case "Chrome":
+        console.log("Run Chrome tests");
+        break;
+
+    case "Firefox":
+        console.log("Run Firefox tests");
+        break;
+
+    case "Webkit":
+        console.log("Run WebKit tests");
+        break;
+
+    default:
+        console.log("Unknown browser");
+}
+
+//The break prevents execution from continuing into the next case. The default block runs if no case matches.

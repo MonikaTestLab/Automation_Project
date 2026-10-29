@@ -131,4 +131,25 @@ do {
     y++
 } while (y <= 15)
 
-    
+//foreach looop.........................................................
+//Another way to process each item in an array is forEach().
+const users: string[] = ["Mounika", "Ravi", "Priya"];
+
+users.forEach((user) => {
+    console.log(user);
+});
+
+
+// Loop	                  Best use
+// for	              When you need an index or precise control over iterations
+// while	          When repetition depends on a condition
+// do...while	      When the code must run at least once
+// for...of	          When processing array items
+// forEach()	      When performing an action for each array item
+
+
+let test: string[] = ['Login', 'Logout', 'Add Product']
+
+for (let testName of test) {
+    console.log('Running Test:', testName)
+}

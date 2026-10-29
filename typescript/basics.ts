@@ -24,7 +24,7 @@ let browsers = 'Chrome';   // string
 let counts = 5;             // number
 let isLoggedIn = true;     // boolean
 
-const monika= 'name'
+const monika = 'name'
 
 
 //Next: TypeScript type annotations -we can explicitly tell TypeScript what type a variable should have:
@@ -117,5 +117,27 @@ if (!isUserLoggedIn) {
 } else {
     console.log('Welcome');
 }
+
+//ternary operator.?..........................................
+// The ternary operator is a short way to write an if...else condition in one line.
+//It uses three parts: a condition, a value if true, and a value if false.
+
+let age = 20;
+
+let result = age >= 18 ? "Adult" : "Minor";
+
+console.log(result);   //op: Adult
+
+//same using if else
+
+let agee = 20;
+
+if (agee >= 18) {
+    console.log('Adult')
+} else {
+    console.log('Minor')
+}
+
+
 
 

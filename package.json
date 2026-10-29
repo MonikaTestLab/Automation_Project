@@ -1,13 +1,12 @@
 {
   "name": "automation-manual",
   "version": "1.0.0",
-  "description": "",
+  "description": "End-to-end test automation framework using Playwright and TypeScript, covering UI testing, functional testing, regression testing, and reusable Page Object Model (POM) design.",
   "main": "index.js",
   "scripts": {
     "test": "playwright test"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
@@ -15,6 +14,18 @@
     "@types/node": "^26.5.1"
   },
   "dependencies": {
-    "dotenv": "^18.0.1"
-  }
+    "dotenv": "^18.0.1",
+    "typescript": "^7.0.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonikaTestLab/Automation_ML.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MonikaTestLab/Automation_ML/issues"
+  },
+  "homepage": "https://github.com/MonikaTestLab/Automation_ML#readme"
 }
